@@ -1,0 +1,70 @@
+vtiger_crmentity:
++--------------+--------------+------+-----+---------+-------+
+| Field        | Type         | Null | Key | Default | Extra |
++--------------+--------------+------+-----+---------+-------+
+| crmid        | int          | NO   | PRI | NULL    |       |
+| smcreatorid  | int          | NO   | MUL | 0       |       |
+| smownerid    | int          | NO   | MUL | 0       |       |
+| modifiedby   | int          | NO   | MUL | 0       |       |
+| setype       | varchar(100) | YES  |     | NULL    |       |
+| description  | mediumtext   | YES  |     | NULL    |       |
+| createdtime  | datetime     | NO   | MUL | NULL    |       |
+| modifiedtime | datetime     | NO   | MUL | NULL    |       |
+| viewedtime   | datetime     | YES  |     | NULL    |       |
+| status       | varchar(50)  | YES  |     | NULL    |       |
+| version      | int          | NO   |     | 0       |       |
+| presence     | int          | YES  |     | 1       |       |
+| deleted      | int          | NO   | MUL | 0       |       |
+| smgroupid    | int          | YES  | MUL | NULL    |       |
+| source       | varchar(100) | YES  | MUL | NULL    |       |
+| label        | varchar(255) | YES  | MUL | NULL    |       |
++--------------+--------------+------+-----+---------+-------+
+
+vtiger_products:
++-------------------------+---------------+------+-----+---------+-------+
+| Field                   | Type          | Null | Key | Default | Extra |
++-------------------------+---------------+------+-----+---------+-------+
+| productid               | int           | NO   | PRI | NULL    |       |
+| product_no              | varchar(100)  | NO   |     | NULL    |       |
+| productname             | varchar(100)  | YES  | MUL | NULL    |       |
+| productcode             | varchar(40)   | YES  |     | NULL    |       |
+| productcategory         | varchar(200)  | YES  |     | NULL    |       |
+| manufacturer            | varchar(200)  | YES  |     | NULL    |       |
+| qty_per_unit            | decimal(11,2) | YES  |     | 0.00    |       |
+| unit_price              | decimal(25,8) | YES  |     | NULL    |       |
+| weight                  | decimal(11,3) | YES  |     | NULL    |       |
+| pack_size               | int           | YES  |     | NULL    |       |
+| sales_start_date        | date          | YES  |     | NULL    |       |
+| sales_end_date          | date          | YES  |     | NULL    |       |
+| start_date              | date          | YES  |     | NULL    |       |
+| expiry_date             | date          | YES  |     | NULL    |       |
+| cost_factor             | int           | YES  |     | NULL    |       |
+| commissionrate          | decimal(7,3)  | YES  |     | NULL    |       |
+| commissionmethod        | varchar(50)   | YES  |     | NULL    |       |
+| discontinued            | int           | NO   |     | 0       |       |
+| usageunit               | varchar(200)  | YES  |     | NULL    |       |
+| reorderlevel            | int           | YES  |     | NULL    |       |
+| website                 | varchar(100)  | YES  |     | NULL    |       |
+| taxclass                | varchar(200)  | YES  |     | NULL    |       |
+| mfr_part_no             | varchar(200)  | YES  |     | NULL    |       |
+| vendor_part_no          | varchar(200)  | YES  |     | NULL    |       |
+| serialno                | varchar(200)  | YES  |     | NULL    |       |
+| qtyinstock              | decimal(25,3) | YES  |     | NULL    |       |
+| productsheet            | varchar(200)  | YES  |     | NULL    |       |
+| qtyindemand             | int           | YES  |     | NULL    |       |
+| glacct                  | varchar(200)  | YES  |     | NULL    |       |
+| vendor_id               | int           | YES  |     | NULL    |       |
+| imagename               | text          | YES  |     | NULL    |       |
+| currency_id             | int           | NO   |     | 1       |       |
+| is_subproducts_viewable | int           | YES  |     | 1       |       |
+| purchase_cost           | decimal(27,8) | YES  |     | NULL    |       |
+| tags                    | varchar(1)    | YES  |     | NULL    |       |
++-------------------------+---------------+------+-----+---------+-------+
+
+vtiger_productcf:
++-----------+------+------+-----+---------+-------+
+| Field     | Type | Null | Key | Default | Extra |
++-----------+------+------+-----+---------+-------+
+| productid | int  | NO   | PRI | 0       |       |
++-----------+------+------+-----+---------+-------+
+
