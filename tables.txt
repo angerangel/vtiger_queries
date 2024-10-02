@@ -640,6 +640,32 @@ vtiger_crmentity:
 | label        | varchar(255) | YES  | MUL | NULL    |       |
 +--------------+--------------+------+-----+---------+-------+
 
+vtiger_inventoryproductrel :
++------------------+---------------+------+-----+---------+----------------+
+| Field            | Type          | Null | Key | Default | Extra          |
++------------------+---------------+------+-----+---------+----------------+
+| id               | int           | YES  | MUL | NULL    |                |
+| productid        | int           | YES  | MUL | NULL    |                |
+| sequence_no      | int           | YES  |     | NULL    |                |
+| quantity         | decimal(25,3) | YES  |     | NULL    |                |
+| listprice        | decimal(27,8) | YES  |     | NULL    |                |
+| discount_percent | decimal(7,3)  | YES  |     | NULL    |                |
+| discount_amount  | decimal(27,8) | YES  |     | NULL    |                |
+| comment          | text          | YES  |     | NULL    |                |
+| description      | text          | YES  |     | NULL    |                |
+| incrementondel   | int           | NO   |     | 0       |                |
+| lineitem_id      | int           | NO   | PRI | NULL    | auto_increment |
+| tax1             | decimal(7,3)  | YES  |     | NULL    |                |
+| tax2             | decimal(7,3)  | YES  |     | NULL    |                |
+| tax3             | decimal(7,3)  | YES  |     | NULL    |                |
+| image            | varchar(2)    | YES  |     | NULL    |                |
+| purchase_cost    | decimal(27,8) | YES  |     | NULL    |                |
+| margin           | decimal(27,8) | YES  |     | NULL    |                |
+| tax4             | decimal(7,3)  | YES  |     | NULL    |                |
++------------------+---------------+------+-----+---------+----------------+
+
+
+
 vtiger_products:
 +-------------------------+---------------+------+-----+---------+-------+
 | Field                   | Type          | Null | Key | Default | Extra |
