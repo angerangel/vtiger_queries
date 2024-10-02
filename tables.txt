@@ -688,3 +688,39 @@ vtiger_productcf:
 | productid | int  | NO   | PRI | 0       |       |
 +-----------+------+------+-----+---------+-------+
 
+vtiger_quotes:
++---------------------+---------------+------+-----+---------+-------+
+| Field               | Type          | Null | Key | Default | Extra |
++---------------------+---------------+------+-----+---------+-------+
+| quoteid             | int           | NO   | PRI | 0       |       |
+| subject             | varchar(100)  | YES  |     | NULL    |       |
+| potentialid         | int           | YES  | MUL | NULL    |       |
+| quotestage          | varchar(200)  | YES  | MUL | NULL    |       |
+| validtill           | date          | YES  |     | NULL    |       |
+| contactid           | int           | YES  | MUL | NULL    |       |
+| quote_no            | varchar(100)  | YES  |     | NULL    |       |
+| subtotal            | decimal(25,8) | YES  |     | NULL    |       |
+| carrier             | varchar(200)  | YES  |     | NULL    |       |
+| shipping            | varchar(100)  | YES  |     | NULL    |       |
+| inventorymanager    | int           | YES  |     | NULL    |       |
+| type                | varchar(100)  | YES  |     | NULL    |       |
+| adjustment          | decimal(25,8) | YES  |     | NULL    |       |
+| total               | decimal(25,8) | YES  |     | NULL    |       |
+| taxtype             | varchar(25)   | YES  |     | NULL    |       |
+| discount_percent    | decimal(25,3) | YES  |     | NULL    |       |
+| discount_amount     | decimal(25,8) | YES  |     | NULL    |       |
+| s_h_amount          | decimal(25,8) | YES  |     | NULL    |       |
+| accountid           | int           | YES  |     | NULL    |       |
+| terms_conditions    | text          | YES  |     | NULL    |       |
+| currency_id         | int           | NO   |     | 1       |       |
+| conversion_rate     | decimal(10,3) | NO   |     | 1.000   |       |
+| compound_taxes_info | text          | YES  |     | NULL    |       |
+| pre_tax_total       | decimal(25,8) | YES  |     | NULL    |       |
+| s_h_percent         | int           | YES  |     | NULL    |       |
+| tags                | varchar(1)    | YES  |     | NULL    |       |
+| region_id           | int           | YES  |     | NULL    |       |
+| preinvoiced_amount  | decimal(25,3) | YES  |     | NULL    |       |
+| preinv_open_amount  | decimal(25,3) | YES  |     | NULL    |       |
++---------------------+---------------+------+-----+---------+-------+
+
+
